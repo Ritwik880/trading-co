@@ -2,8 +2,6 @@ import React from 'react';
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
-
-
 const Footer = () => {
     return (
         <section className='footer-section'>
