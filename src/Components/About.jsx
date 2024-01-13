@@ -29,7 +29,6 @@ const About = () => {
             </section>
             <img src='/client.svg' alt='client-logo' className='client-banner' />
         </>
-
     )
 }
 
