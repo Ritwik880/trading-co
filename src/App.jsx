@@ -5,9 +5,11 @@ import Navbar from './Components/Navbar';
 import './App.css'
 import Home from './Components/Home';
 import About from './Components/About';
-import Team from './Components/Team';
-import Timeline from './Components/Timeline';
-import Footer from './Components/Footer';
+import Work from './Components/Work';
+import Contact from './Components/Contact';
+import Testimonial from './Components/Testimonial';
+import Video from './Components/Video';
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
       <Navbar />
       <Home />
       <About/>
-      <Timeline/>
-      <Team/>
+      <Work/>
+      <Contact/>
+      <Testimonial/>
+      <Video/>
       <Footer/>
     </>
   )
