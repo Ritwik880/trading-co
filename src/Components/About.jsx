@@ -16,7 +16,7 @@ const About = () => {
                                     Completed Projects
                                 </p>
                             </div>
-                            <div className='construct-sub-div'>
+                            <div className='construct-sub-div2'>
                                 <h2 className='construct-sub-div-heading'>
                                     5+
                                 </h2>
@@ -69,6 +69,11 @@ const About = () => {
                         </div>
                         <div className='col-lg-6 col-md-12'>
                             <div className='about-bottom-section-image-div'>
+                                <div className='video-icon-btn'>
+                                    <a href='#'>
+                                        <img src='/video_icon.svg' alt='video' />
+                                    </a>
+                                </div>
                                 <div className='about-bottom-section-sub-div'>
                                     <img src='/about1.svg' alt='about' className='about-img' />
                                 </div>
@@ -81,7 +86,7 @@ const About = () => {
 
                 </div>
             </section>
-            
+
         </>
     )
 }
