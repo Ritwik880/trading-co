@@ -11,7 +11,7 @@ const Testimonial = () => {
                     Our Clients Say
                 </h1>
                 <div className='testimonial-div'>
-                    <img src='/testimonial1.svg' alt='testimonial' />
+                    <img src='/testimonial1.svg' alt='testimonial' className='image'/>
                     <div className='testimonial-right-div'>
                         <img src='/quote_icon.svg' alt='testimonial' />
                         <p className='testimonial-para'>
