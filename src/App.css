@@ -359,6 +359,30 @@ html {
   gap: 10px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+}
+
+.image-container {
+  display: grid; /* Set display to grid */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  grid-row: span 2; /* Move grid-row property to the parent container */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.work-image-div:hover .overlay {
+  opacity: 1;
 }
 
 .work-image-div img {
@@ -367,13 +391,11 @@ html {
   object-fit: cover;
 }
 
-.work-image-div img:first-child {
-  grid-row: span 2;
-}
-
 .work-image-div img:nth-child(n+2) {
   grid-column: span 1;
 }
+
+
 
 /* contact-section */
 .contact-section {
@@ -503,6 +525,10 @@ html {
   background-repeat: no-repeat;
   height: 600px;
   margin-bottom: 100px;
+}
+
+.modal-body {
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -953,10 +979,11 @@ html {
     width: 100%;
     /* height: 235px; */
   }
+
   .video-icon-btn {
     left: 44%;
     top: 41%;
-}
+  }
 
   .construct-sub-right-div {
     position: static;

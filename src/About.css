@@ -1,0 +1,164 @@
+#root {
+    --primary: #D2153D;
+    --secondary: #F9F9F9;
+    --white: #FFFFFF;
+    --text: #00215B;
+    --text2: #41444B;
+
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/about-landing.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+.about-navigation-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.about-heading {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 64px;
+    color: var(--white);
+}
+
+.about-link {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.about-part2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.about-part2 .about-span{
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.about-part2 .about-part2-heading{
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 64px;
+}
+
+.about-part2-div{
+    background: var(--secondary);
+    padding: 20px;
+}
+
+.about-part2-para{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.about-part2-sub-head{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 48px;
+    letter-spacing: 1.5px;
+}
+
+.about-part3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/about-quote.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 150px 0;
+}
+.about-quote-head{
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+.about-quote{
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 64px;
+    color: var(--white);
+}
+.about-para{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    color: var(--white);
+    width: 65%;
+    margin: auto;
+    padding: 20px 0;
+}
+.about-part4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+.about-quote-div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.about-quote-text{
+    display: flex;
+    gap: 7px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.about-quote-subHead{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.about-quote-para{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    color: #000000;
+}
+.about-appointment{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: var(--primary);
+}
+.about-request{
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 64px;
+    color: var(--text);
+}
+.about-input-div{
+    padding-bottom: 30px;
+}
+.about-input-box{
+    border: 1px solid #00000040
+}

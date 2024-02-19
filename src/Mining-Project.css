@@ -1,0 +1,27 @@
+#root {
+    --primary: #D2153D;
+    --secondary: #F9F9F9;
+    --white: #FFFFFF;
+    --text: #00215B;
+    --text2: #41444B;
+
+}
+
+.mining-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/mining-project.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+.mine-project {
+    padding: 100px 0;
+}
+.mining-project-image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

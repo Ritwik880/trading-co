@@ -1,0 +1,149 @@
+#root {
+    --primary: #D2153D;
+    --secondary: #F9F9F9;
+    --white: #FFFFFF;
+    --text: #00215B;
+    --text2: #41444B;
+
+}
+
+.mining {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/stone.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+.mining-social-parent {
+    position: relative;
+}
+
+.mining-social {
+    position: absolute;
+    box-shadow: 0px 0px 35px 0px #00000024;
+    border-top: 6px solid var(--primary);
+    padding: 35px 20px;
+    width: 400px;
+    right: 155px;
+    background: #ffffff;
+    top: -94px;
+}
+.mining-span{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    color: #000000;
+    padding-left: 20px;
+}
+.mining-phone{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 59px;
+    color: var(--text);
+    letter-spacing: 1px;
+}
+.mining-landing {
+    padding: 100px 0;
+}
+
+.mine-image-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mine-image {
+    object-fit: cover;
+}
+
+.mining-heading {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: 5%;
+    color: #000000;
+}
+
+.mining-main-para {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.mining-info {
+    padding: 40px 30px;
+    margin-bottom: 30px;
+}
+
+.even-background {
+    background-color: var(--primary);
+}
+
+.odd-background {
+    background-color: var(--text);
+}
+
+.mining-text {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: 5%;
+    width: 75%;
+    padding-bottom: 15px;
+    /* word-break: break-word; */
+}
+
+.mining-para {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    color: var(--white);
+    width: 75%;
+    padding-bottom: 15px;
+}
+
+.mining-btn-arrow {
+    border: none;
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+}
+
+.mining-service {
+    padding: 50px 0;
+}
+
+.service-parent-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-div {
+    box-shadow: 0px 0px 25px 0px #00000024;
+    border-top: 6px solid var(--primary);
+    padding: 40px 20px;
+    width: 230px;
+}
+
+.service-btn {
+    background: transparent;
+    border: none;
+}
+
+.service-heading {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 38px;
+    color: #000000;
+    padding-bottom: 20px;
+}
