@@ -1,5 +1,5 @@
 import React from 'react'
-import { TEAMDATA as data } from '../../constants/utils'
+import { TEAMDATA as data } from '../constants/utils'
 const Team = () => {
     return (
         <section className='about-section'>

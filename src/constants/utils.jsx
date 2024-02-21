@@ -186,21 +186,114 @@ export const MINEPROJECT = [
         id: 3,
         para: "Koderma, located in the Indian state of Jharkhand, is renowned for its rich mineral resources, particularly mica and kyanite. The region has a significant presence in the mining industry, with numerous mines extracting these valuable minerals. Koderma's mica deposits, known for their quality versatile mineral with applications in the electronics, cosmetics, and construction industries, is a key economic driver for the region."
     },
+
+]
+
+export const IMAGES = [
     {
-        id: 4,
+        id: 1,
         img: '/mine5.svg'
     },
     {
-        id: 5,
+        id: 2,
         img: '/mine6.svg'
     },
     {
-        id: 6,
+        id: 3,
         img: '/mine7.svg'
     },
     {
-        id: 7,
+        id: 4,
         img: '/mine8.svg'
     }
+]
 
+export const SOCIAL = [
+    {
+        id: 1,
+        img: '/fb.svg'
+    },
+    {
+        id: 2,
+        img: '/insta.svg'
+    },
+    {
+        id: 3,
+        img: '/ln.svg'
+    }
+]
+
+export const PROJECT = [
+    {
+        id: 1,
+        img: '/project1.svg'
+    },
+    {
+        id: 2,
+        img: '/project2.svg'
+    },
+    {
+        id: 3,
+        img: '/project3.svg'
+    },
+    {
+        id: 4,
+        img: '/project4.svg'
+    },
+    {
+        id: 5,
+        img: '/project5.svg'
+    },
+    {
+        id: 6,
+        img: '/project6.svg'
+    },
+    {
+        id: 7,
+        img: '/project7.svg'
+    },
+    {
+        id: 8,
+        img: '/project8.svg'
+    }
+]
+
+export const HEADER = [
+    {
+        id: 1,
+        img: '/tw.svg'
+    },
+    {
+        id: 2,
+        img: '/header-fb.svg'
+    },
+    {
+        id: 3,
+        img: '/header-ln.svg'
+    },
+    {
+        id: 4,
+        img: '/header-yt.svg'
+    },
+]
+
+export const DROPDOWN = [
+    {
+        id: 1,
+        img: '/bucket.svg',
+        title: 'Sand Supply',
+        desc: 'Delivering superior quality sand right to your doorstep through a cost-effective scheme.'
+    },
+    {
+        id: 2,
+        img: '/stone2.svg',
+        title: 'Stone Supply',
+        desc: 'Providing premium quality stones at your convenience.'
+    },
+    {
+        id: 3,
+        img: '/coal.svg',
+        title: 'Coal Supply',
+        desc: 'Efficiently delivering high-grade coal to your location.'
+    },
 ]
