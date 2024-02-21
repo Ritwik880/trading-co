@@ -4,7 +4,7 @@ const Video = () => {
   return (
     <section className='video-section'>
       <a href='#'>
-        <img src='/button.svg' alt='button' />
+        <img src='/button.svg' alt='button' className='video-btn-banner'/>
       </a>
     </section>
   )
