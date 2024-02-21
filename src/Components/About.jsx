@@ -1,7 +1,7 @@
 import React from 'react'
-import '../../About.css';
+import '../About.css';
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { QUOTE as quote } from '../../constants/utils';
+import { QUOTE as quote } from '../constants/utils';
 const About = () => {
   return (
     <>
@@ -25,7 +25,7 @@ const About = () => {
       <section className='about-part2'>
         <div className='row container'>
           <div className='col-lg-6 col-md-12'>
-            <img src='/about-mission.svg' alt='about-mission' />
+            <img src='/about-mission.svg' alt='about-mission' className='ourmission' />
           </div>
           <div className='col-lg-6 col-md-12'>
             <span className='about-span'>
@@ -74,7 +74,7 @@ const About = () => {
             </div>
           </div>
           <div className='col-lg-6 col-md-12'>
-            <img src='/about-vision.svg' alt='about-mission' />
+            <img src='/about-vision.svg' alt='about-mission' className='ourmission' />
           </div>
         </div>
       </section>
@@ -136,14 +136,16 @@ const About = () => {
             {
               quote.map((item, index) => (
                 <div key={index} className='about-quote-div'>
-                  <img src={item.img} alt={item.name} />
-                  <div className='about-quote-text'>
-                    <h6 className='about-quote-subHead'>
-                      {item.name}
-                    </h6>
-                    <p className='about-quote-para'>
-                      {item.title}
-                    </p>
+                  <div className='about-quote-parent-div'>
+                    <img src={item.img} alt={item.name} />
+                    <div className='about-quote-text'>
+                      <h6 className='about-quote-subHead'>
+                        {item.name}
+                      </h6>
+                      <p className='about-quote-para'>
+                        {item.title}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))

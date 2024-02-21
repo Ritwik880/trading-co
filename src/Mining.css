@@ -147,3 +147,47 @@
     color: #000000;
     padding-bottom: 20px;
 }
+
+@media (max-width: 767px) {
+    .mine-image-div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mining-social {
+        width: 100%;
+        right: 0;
+    }
+    .mining-text {
+        width: 100%;
+    }
+    .service-parent-div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-div {
+        width: 100%;
+    }
+    .mining-para {
+       width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mining-social {
+        right: 171px;
+    }
+    .mine-image-div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mine-image{
+        width: 100%;
+    }
+    .service-parent-div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-div {
+        width: 100%;
+    }
+}

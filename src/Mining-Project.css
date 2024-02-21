@@ -21,7 +21,78 @@
 .mine-project {
     padding: 100px 0;
 }
-.mining-project-image{
+.grid-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.mining-project-para{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+    padding: 20px 0;
+}
+.mine-parent-image{
+    width: 600px;
+}
+.koderma-heading{
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    color: #000000;
+}
+.koderma-para{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    color: #000000;
+}
+.project-info{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44.8px;
+    color: #000000;
+}
+.project-left-head{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: #000000;
+}
+.project-right-head{
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+    padding-left: 15px;
+}
+.project-social-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .mine-parent-image{
+        width: 100%;
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+    .koderma-heading{
+        padding-top: 45px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mine-parent-image{
+        width: 100%;
+    }
+    .koderma-heading{
+        padding-top: 45px;
+    }
 }

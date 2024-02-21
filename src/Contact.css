@@ -42,3 +42,9 @@
     color: var(--text);
     word-break: break-all;
 }
+@media (max-width: 767px){
+    .info-para {
+        font-size: 20px;
+        line-height: 34px
+    }
+}

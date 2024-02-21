@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { CONSTRUCTDATA as data } from '../../constants/utils';
-import Video from '../Video';
+import { CONSTRUCTDATA as data } from '../constants/utils';
+import Video from './Video';
 const Home = () => {
     return (
         <>

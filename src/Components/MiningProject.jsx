@@ -1,6 +1,8 @@
 import React from 'react'
 import '../Mining-Project.css';
 import { MINEPROJECT as project } from '../constants/utils';
+import { SOCIAL as social } from '../constants/utils';
+import { IMAGES as images } from '../constants/utils';
 const MiningProject = () => {
     return (
         <>
@@ -30,26 +32,67 @@ const MiningProject = () => {
             <section className='d-flex justify-content-center align-items-center mine-project'>
                 <div className='row container'>
                     <div className='col-lg-6 col-md-12'>
-                        <img src='/mine4.svg' alt='mine4' />
+                        <img src='/mine4.svg' alt='mine4' className='mine-parent-image' />
                         {
                             project.map((item, index) => (
-                                <div key={index}>
+                                <>
                                     {
-                                        item.para && <p>
+                                        item.para && <p className='mining-project-para' key={index}>
                                             {item.para}
                                         </p>
                                     }
-                                    {
-                                        item.img && <div className='mining-project-image'>
-                                            <img src={item.img} alt='item' />
-                                        </div>
-                                    }
-                                </div>
+                                </>
                             ))
                         }
+                        <div className='grid-container'>
+                            {images.map((item, index) => (
+                                <img src={item.img} alt='item' key={index}/>
+                            ))}
+                        </div>
                     </div>
                     <div className='col-lg-6 col-md-12'>
+                        <h3 className='koderma-heading'>
+                            Koderma Mining
+                        </h3>
+                        <p className='koderma-para'>
+                            Koderma, located in the Indian state of Jharkhand, is renowned for its rich mineral resources, particularly mica and kyanite. The region has a significant presence in the mining industry, with numerous mines extracting these valuable minerals. Koderma's mica deposits, known for their quality and variety, contribute significantly to India's mica production. Mica, a versatile mineral with applications in the electronics, cosmetics .
+                        </p>
 
+                        <h5 className='project-info'>
+                            Project Info
+                        </h5>
+                        <div>
+                            <span className='project-left-head'>
+                                Client:
+                            </span>
+                            <span className='project-right-head'>
+                                Akshay Singh
+                            </span>
+                        </div>
+                        <div>
+                            <span className='project-left-head'>
+                                Category:
+                            </span>
+                            <span className='project-right-head'>
+                                Mining Business
+                            </span>
+                        </div>
+                        <div>
+                            <span className='project-left-head'>
+                                Completed on:
+                            </span>
+                            <span className='project-right-head'>
+                                20 January 2022
+                            </span>
+                        </div>
+
+                        <div className='project-social-div'>
+                            {
+                                social.map((item, index) => (
+                                    <img src={item.img} key={index} alt="social" onClick={() => window.open(item.url)} />
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </section>
