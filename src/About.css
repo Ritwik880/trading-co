@@ -180,11 +180,20 @@
     display: flex;
     gap: 20px;
 }
-
+.ourmission{
+    width: 450px;
+}
+.team1image{
+    margin-top: 60px;
+    margin-left: 40px;
+}
 @media (max-width: 767px) {
     .ourmission {
         width: 100%;
         object-fit: cover;
+    }
+    .team1image{
+        margin-left: 0;
     }
 
     .about-part2 .about-part2-heading {
@@ -215,6 +224,9 @@
     .ourmission {
         width: 100%;
         object-fit: cover;
+    }
+    .team1image{
+        margin-left: 0;
     }
 
     .about-part2 .about-part2-heading {
