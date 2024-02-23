@@ -42,7 +42,7 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-                Ajit Kumar, CEO
+                Dr Jitendra Kumar, CEO
               </h6>
               <div className='landing-button-div'>
                 <button className='learn-more-btn'>
@@ -65,7 +65,7 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-                Soni Singh, COO
+                Amit Anand, COO
               </h6>
               <div className='landing-button-div'>
                 <button className='learn-more-btn'>
@@ -75,7 +75,7 @@ const About = () => {
             </div>
           </div>
           <div className='col-lg-6 col-md-12'>
-            <img src='/team1.jpeg' alt='about-mission' className='ourmission team1image' />
+            <img src='/team5.jpeg' alt='about-mission' className='ourmission team1image' />
           </div>
         </div>
       </section>

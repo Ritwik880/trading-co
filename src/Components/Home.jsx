@@ -106,7 +106,7 @@ const Home = () => {
                             <div className="modal-dialog">
                                 <div className="modal-content">
                                     <video controls width="100%" height="auto">
-                                        <source src="/video.mp4" type="video/mp4" />
+                                        <source src="/inshot.mp4" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
 

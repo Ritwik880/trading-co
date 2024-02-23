@@ -49,7 +49,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href='/project'>
+                                <a href='/mining-project'>
                                     Our Projects
                                 </a>
                             </li>
