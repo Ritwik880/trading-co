@@ -15,7 +15,7 @@ const Contact = () => {
                         <span className='about-link'>
                             /
                         </span>
-                        <a href='/about' className='about-link'>
+                        <a href='/contact' className='about-link'>
                             Contacts
                         </a>
                     </div>
@@ -67,7 +67,7 @@ const Contact = () => {
                             Company Address
                             </span>
                             <p className='info-para'>
-                            202, 2 Floor Vijay, Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
+                            JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
                             </p>
                         </div>
                     </div>
@@ -80,10 +80,10 @@ const Contact = () => {
                                         COMPANY PHONES
                                     </span>
                                     <p className='contact-social-para'>
-                                        + 91 942 355 4569
+                                        +  9241149525
                                     </p>
                                     <p className='contact-social-para'>
-                                        + 91 942 355 4569
+                                        +  9241149525
                                     </p>
                                 </div>
                             </div>
