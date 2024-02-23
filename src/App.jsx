@@ -12,6 +12,8 @@ import Contact from './Components/Contact';
 import Mining from './Components/Mining';
 import MiningProject from './Components/MiningProject';
 import Project from './Components/Project';
+import Construction from './Components/Construction';
+import RealEstate from './Components/RealEstate';
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
         <Route path='/mining' element={<Mining />} />
         <Route path='/project' element={<Project />} />
         <Route path='/mining-project' element={<MiningProject />} />
+        <Route path='/construction' element={<Construction />} />
+        <Route path='/real-estate' element={<RealEstate />} />
       </Routes>
       <Footer />
     </>

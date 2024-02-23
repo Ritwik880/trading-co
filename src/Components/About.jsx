@@ -25,7 +25,7 @@ const About = () => {
       <section className='about-part2'>
         <div className='row container'>
           <div className='col-lg-6 col-md-12'>
-            <img src='/about-mission.svg' alt='about-mission' className='ourmission' />
+            <img src='/team3.jpeg' alt='about-mission' className='ourmission' />
           </div>
           <div className='col-lg-6 col-md-12'>
             <span className='about-span'>
@@ -74,7 +74,7 @@ const About = () => {
             </div>
           </div>
           <div className='col-lg-6 col-md-12'>
-            <img src='/about-vision.svg' alt='about-mission' className='ourmission' />
+            <img src='/team1.jpeg' alt='about-mission' className='ourmission team1image' />
           </div>
         </div>
       </section>
@@ -130,6 +130,11 @@ const About = () => {
             <div>
               <textarea className="form-control" placeholder="Message" rows={6} onResize={false}></textarea>
             </div>
+            <div className='landing-button-div mt-3'>
+                <button className='learn-more-btn'>
+                Appointment <FaLongArrowAltRight />
+                </button>
+              </div>
           </div>
 
           <div className='col-lg-6 col-md-12'>

@@ -124,7 +124,14 @@ const Home = () => {
                     <div className='work-image-div'>
                         <div className='image-container'>
                             <img src='/work1.svg' alt='work' />
-                            <div className='overlay'></div>
+                            <div className='overlay'>
+                                <h6>
+                                Commercial
+                                </h6>
+                                <p>
+                                Alpha Construction 
+                                </p>
+                            </div>
                         </div>
                         <div className='image-container'>
                             <img src='/work2.svg' alt='work' />
@@ -154,7 +161,7 @@ const Home = () => {
                                 COMPANY ADDRESS
                             </span>
                             <h3 className='contact-heading'>
-                                202, 2 Floor Vijay, Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
+                            JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
                             </h3>
                         </div>
                         <div className='contact-social-parent-div'>
@@ -165,10 +172,10 @@ const Home = () => {
                                         COMPANY PHONES
                                     </span>
                                     <p className='contact-social-para'>
-                                        + 91 942 355 4569
+                                        +  9241149525
                                     </p>
                                     <p className='contact-social-para'>
-                                        + 91 942 355 4569
+                                        +  9241149525
                                     </p>
                                 </div>
                             </div>

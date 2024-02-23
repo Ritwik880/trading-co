@@ -6,12 +6,12 @@ const Footer = () => {
     return (
         <section className='footer-section'>
             <div className='footer-left-part'>
-                <img src='/nav-logo.svg' alt='logo' />
+                <img src='/nav-logo.png' alt='logo' className='footer-logo' />
                 <span>
                     CALL US TODAY
                 </span>
                 <h1>
-                    + 91 942 355 4569
+                    +  9241149525
                 </h1>
                 <div className='social-media'>
                     <a href='#'>
@@ -28,7 +28,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <p>
-                    202, 2 Floor Vijay, Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
+                    JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
                 </p>
             </div>
             <div className='footer-right-part'>
@@ -39,19 +39,29 @@ const Footer = () => {
                         </h1>
                         <ul>
                             <li>
-                                Home
+                                <a href='/'>
+                                    Home
+                                </a>
                             </li>
                             <li>
-                                About Us
+                                <a href='/about'>
+                                    About Us
+                                </a>
                             </li>
                             <li>
-                                Our Projects
+                                <a href='/project'>
+                                    Our Projects
+                                </a>
                             </li>
                             <li>
-                                Pricings
+                                <a href='/'>
+                                    Pricings
+                                </a>
                             </li>
                             <li>
-                                Contacts
+                                <a href='/contact'>
+                                    Contacts
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -61,16 +71,24 @@ const Footer = () => {
                         </h1>
                         <ul>
                             <li>
+                                <a href='/mining'>
                                 Mining
+                                </a>
                             </li>
                             <li>
+                                <a href='/mining-project'>
                                 Supply Chain
+                                </a>
                             </li>
                             <li>
+                                <a href='/'>
                                 Construction
+                                </a>
                             </li>
                             <li>
+                                <a href='/'>
                                 Real Estate
+                                </a>
                             </li>
 
                         </ul>

@@ -19,13 +19,13 @@ const Mining = () => {
             <span className='about-link'>
               /
             </span>
-            <a href='/about' className='about-link'>
+            <a href='/mining' className='about-link'>
               Mining
             </a>
             <span className='about-link'>
               /
             </span>
-            <a href='/about' className='about-link'>
+            <a href='/mining-project' className='about-link'>
               Stone Mining
             </a>
           </div>
@@ -38,7 +38,7 @@ const Mining = () => {
             Call Us Today
           </span>
           <p className='mining-phone'>
-            + 91 942 355 4569
+          +  9241149525
           </p>
         </div>
       </div>

@@ -58,7 +58,7 @@ const Navbar = () => {
                 <div className="container">
 
                     <a className="navbar-brand" href="/">
-                        <img src='/nav-logo.svg' alt='nav-logo' className='nav-logo' />
+                        <img src='/nav-logo.png' alt='nav-logo' className='nav-logo' />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -106,21 +106,15 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/construction">
                                     Construction
                                 </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                </ul>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/real-estate">
                                     Real Estate
                                 </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                </ul>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/contact">Contact</a>
