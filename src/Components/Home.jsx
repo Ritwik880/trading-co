@@ -1,13 +1,16 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { CONSTRUCTDATA as data } from '../constants/utils';
 import Video from './Video';
 import Modal from 'react-bootstrap/Modal';
+
+
 const Home = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <>
             <section className='landing-section'>
