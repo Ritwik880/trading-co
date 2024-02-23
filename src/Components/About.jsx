@@ -2,6 +2,7 @@ import React from 'react'
 import '../About.css';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { QUOTE as quote } from '../constants/utils';
+import Team from './Team';
 const About = () => {
   return (
     <>
@@ -101,6 +102,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Team/>
 
       <section className='about-part4'>
         <div className='row container'>
