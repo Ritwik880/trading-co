@@ -48,3 +48,9 @@
         line-height: 34px
     }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .info-para {
+        font-size: 24px;
+    }
+}
