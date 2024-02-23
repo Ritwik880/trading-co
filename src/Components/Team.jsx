@@ -20,9 +20,9 @@ const Team = () => {
                     </div>
                     <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
                         <div class="card">
-                            <img class="card-img" src="/team1.jpeg" />
+                            <img class="card-img" src="/team5.jpeg" />
                             <p class="text-blk name">
-                                Soni Kumari
+                                Amit Anand
                             </p>
                         </div>
                     </div>

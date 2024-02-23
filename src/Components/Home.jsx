@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { CONSTRUCTDATA as data } from '../constants/utils';
 import Video from './Video';
+import Modal from 'react-bootstrap/Modal';
 const Home = () => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <>
             <section className='landing-section'>
@@ -90,9 +95,9 @@ const Home = () => {
                         <div className='col-lg-6 col-md-12'>
                             <div className='about-bottom-section-image-div'>
                                 <div className='video-icon-btn'>
-                                    <a href='#' data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button onClick={handleShow} className='video-icon'>
                                         <img src='/video_icon.svg' alt='video' />
-                                    </a>
+                                    </button>
                                 </div>
                                 <div className='about-bottom-section-sub-div'>
                                     <img src='/about1.svg' alt='about' className='about-img' />
@@ -102,21 +107,24 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div className="modal-dialog">
-                                <div className="modal-content">
-                                    <video controls width="100%" height="auto">
-                                        <source src="/inshot.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                        <Modal show={show} onHide={handleClose}
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered
+                        >
 
-                                </div>
-                            </div>
-                        </div>
+                            <Modal.Body>
+                                <video controls width="100%" height="auto">
+                                    <source src="/inshot.mp4" type="video/mp4" />
+                                </video>
+                            </Modal.Body>
+                        </Modal>
+
                     </div>
 
                 </div>
             </section>
+            {/* <section className='d-flex justify-content-center align-items-center research'></section> */}
             <section className='work-section'>
                 <div className='row container'>
                     <span className='work-span'>OUR WORKS</span>
@@ -125,29 +133,77 @@ const Home = () => {
                         <div className='image-container'>
                             <img src='/work1.svg' alt='work' />
                             <div className='overlay'>
-                                <h6>
-                                Commercial
+                                <h6 className='overlay-heading'>
+                                    Commercial
                                 </h6>
-                                <p>
-                                Alpha Construction 
+                                <p className='overlay-para'>
+                                    Alpha Construction
                                 </p>
+
+                                <button className='overlay-btn'>
+                                    +
+                                </button>
                             </div>
                         </div>
                         <div className='image-container'>
                             <img src='/work2.svg' alt='work' />
-                            <div className='overlay'></div>
+                            <div className='overlay'>
+                                <h6 className='overlay-heading'>
+                                    Commercial
+                                </h6>
+                                <p className='overlay-para'>
+                                    Alpha Construction
+                                </p>
+
+                                <button className='overlay-btn'>
+                                    +
+                                </button>
+                            </div>
                         </div>
                         <div className='image-container'>
                             <img src='/work3.svg' alt='work' />
-                            <div className='overlay'></div>
+                            <div className='overlay'>
+                                <h6 className='overlay-heading'>
+                                    Commercial
+                                </h6>
+                                <p className='overlay-para'>
+                                    Alpha Construction
+                                </p>
+
+                                <button className='overlay-btn'>
+                                    +
+                                </button>
+                            </div>
                         </div>
                         <div className='image-container'>
                             <img src='/work4.svg' alt='work' />
-                            <div className='overlay'></div>
+                            <div className='overlay'>
+                                <h6 className='overlay-heading'>
+                                    Commercial
+                                </h6>
+                                <p className='overlay-para'>
+                                    Alpha Construction
+                                </p>
+
+                                <button className='overlay-btn'>
+                                    +
+                                </button>
+                            </div>
                         </div>
                         <div className='image-container'>
                             <img src='/work2.svg' alt='work' />
-                            <div className='overlay'></div>
+                            <div className='overlay'>
+                                <h6 className='overlay-heading'>
+                                    Commercial
+                                </h6>
+                                <p className='overlay-para'>
+                                    Alpha Construction
+                                </p>
+
+                                <button className='overlay-btn'>
+                                    +
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,7 +217,7 @@ const Home = () => {
                                 COMPANY ADDRESS
                             </span>
                             <h3 className='contact-heading'>
-                            JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
+                                JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
                             </h3>
                         </div>
                         <div className='contact-social-parent-div'>
@@ -222,7 +278,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <Video/>
+            <Video />
         </>
 
     )
