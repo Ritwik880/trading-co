@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HEADER as header } from '../constants/utils';
 import { DROPDOWN as dropdown } from '../constants/utils';
+import LazyLoad from 'react-lazyload';
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
 
@@ -45,7 +46,9 @@ const Navbar = () => {
                             {
                                 header.map((item, index) => (
                                     <a href='#' className='header-social' key={index}>
-                                        <img src={item.img} alt='header' />
+                                        <LazyLoad height={200} offset={100}>
+                                            <img src={item.img} alt='header' />
+                                        </LazyLoad>
                                     </a>
                                 ))
                             }
@@ -86,7 +89,9 @@ const Navbar = () => {
                                             {
                                                 dropdown.map((item, index) => (
                                                     <div key={index} className='dropdown-child-box'>
-                                                        <img src={item.img} alt='image' className='dropdown-icon'/>
+                                                    <LazyLoad height={200} offset={100}>
+                                                        <img src={item.img} alt='image' className='dropdown-icon' />
+                                                    </LazyLoad>
                                                         <div>
                                                             <h6 className='dropdown-title'>
                                                                 {

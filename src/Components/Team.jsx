@@ -1,39 +1,31 @@
 import React from 'react';
-import '../Team.css'
+import '../Team.css';
+import { TEAM as data } from '../constants/utils';
+import LazyLoad from 'react-lazyload';
 const Team = () => {
     return (
         <section className='team-section'>
             <div className='row container'>
-                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-4 wk-ipadp-4 headings-container">
-                    <p class="text-blk heading-text">
+                <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-4 wk-ipadp-4 headings-container">
+                    <p className="text-blk heading-text">
                         Meet our dream team
                     </p>
                 </div>
-                <div class="responsive-cell-block wk-desk-8 wk-ipadp-8 wk-tab-12 wk-mobile-12 team-members-container">
-                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
-                        <div class="card">
-                            <img class="card-img" src="/team2.jpeg" />
-                            <p class="text-blk name">
-                                Urmila Devi
-                            </p>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
-                        <div class="card">
-                            <img class="card-img" src="/team5.jpeg" />
-                            <p class="text-blk name">
-                                Amit Anand
-                            </p>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
-                        <div class="card">
-                            <img class="card-img" src="/team4.jpeg" />
-                            <p class="text-blk name">
-                            Gajendra Singh
-                            </p>
-                        </div>
-                    </div>
+                <div className="responsive-cell-block wk-desk-8 wk-ipadp-8 wk-tab-12 wk-mobile-12 team-members-container">
+                    {
+                        data.map((item, index) => (
+                            <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container" key={index}>
+                                <div className="card">
+                                    <LazyLoad height={200} offset={100}>
+                                        <img className="card-img" src={item.img} />
+                                    </LazyLoad>
+                                    <p className="text-blk name">
+                                        {item.name}
+                                    </p>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </section>

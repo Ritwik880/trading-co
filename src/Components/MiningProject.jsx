@@ -3,6 +3,7 @@ import '../Mining-Project.css';
 import { MINEPROJECT as project } from '../constants/utils';
 import { SOCIAL as social } from '../constants/utils';
 import { IMAGES as images } from '../constants/utils';
+import LazyLoad from 'react-lazyload';
 const MiningProject = () => {
     return (
         <>
@@ -32,7 +33,9 @@ const MiningProject = () => {
             <section className='d-flex justify-content-center align-items-center mine-project'>
                 <div className='row container'>
                     <div className='col-lg-6 col-md-12'>
-                        <img src='/mine4.svg' alt='mine4' className='mine-parent-image' />
+                        <LazyLoad height={200} offset={100}>
+                            <img src='/mine4.svg' alt='mine4' className='mine-parent-image' />
+                        </LazyLoad>
                         {
                             project.map((item, index) => (
                                 <>
@@ -46,7 +49,9 @@ const MiningProject = () => {
                         }
                         <div className='grid-container'>
                             {images.map((item, index) => (
-                                <img src={item.img} alt='item' key={index}/>
+                                <LazyLoad height={200} offset={100} key={index}>
+                                    <img src={item.img} alt='item' />
+                                </LazyLoad>
                             ))}
                         </div>
                     </div>
@@ -89,7 +94,9 @@ const MiningProject = () => {
                         <div className='project-social-div'>
                             {
                                 social.map((item, index) => (
-                                    <img src={item.img} key={index} alt="social" onClick={() => window.open(item.url)} />
+                                    <LazyLoad height={200} offset={100} key={index}>
+                                        <img src={item.img} alt="social" onClick={() => window.open(item.url)} />
+                                    </LazyLoad>
                                 ))
                             }
                         </div>

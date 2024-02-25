@@ -276,7 +276,83 @@ export const HEADER = [
         img: '/header-yt.svg'
     },
 ]
+export const WORKIMAGE = [
+    {
+        id: 1,
+        img: '/work1.svg',
+        name: 'Commercial',
+        desc: 'Alpha Construction',
+        btn: '+'
+    },
+    {
+        id: 2,
+        img: '/work2.svg',
+        name: 'Commercial',
+        desc: 'Alpha Construction',
+        btn: '+'
+    },
+    {
+        id: 3,
+        img: '/work3.svg',
+        name: 'Commercial',
+        desc: 'Alpha Construction',
+        btn: '+'
+    },
+    {
+        id: 4,
+        img: '/work4.svg',
+        name: 'Commercial',
+        desc: 'Alpha Construction',
+        btn: '+'
+    },
+    {
+        id: 5,
+        img: '/work2.svg',
+        name: 'Commercial',
+        desc: 'Alpha Construction',
+        btn: '+'
+    },
+]
 
+export const CONTACTDATA = [
+    {
+        id: 1,
+        img: '/call.svg',
+        name: 'COMPANY PHONES',
+        desc1: '+91  9241149525',
+        desc2: '+91  9241149525'
+    },
+    {
+        id: 2,
+        img: '/message.svg',
+        name: 'Jeet and Soni enterprises Emails',
+        desc1: 'jeetandsoni@gmail.com',
+        desc2: 'jeetandsoni.info@gmail.com'
+    }
+]
+
+export const BANNER = [
+    {
+        id: 1,
+        name: '47',
+        desc: 'Completed Projects'
+    },
+    {
+        id: 2,
+        name: '5+',
+        desc: 'Years of Experience'
+    },
+]
+export const TESTIMONIAL = [
+    {
+        id: 1,
+        img: '/testimonial1.svg',
+        img2: '/quote_icon.svg',
+        desc: 'Exceptional service! The coal mining expertise provided by this company has not only optimized our operations but also significantly increased our productivity, making them our trusted partner for all our sand and coal mining needs."',
+        name: 'Dikshita Singh',
+        para: 'Organic Sector Industries'
+    }
+]
 export const DROPDOWN = [
     {
         id: 1,
@@ -296,4 +372,44 @@ export const DROPDOWN = [
         title: 'Coal Supply',
         desc: 'Efficiently delivering high-grade coal to your location.'
     },
+]
+
+export const ABOUTDATA = [
+    {
+        id: 1,
+        img: '/team3.jpeg',
+        span: 'our mission',
+        h1: 'To providing the best services and qualities',
+        para: 'At Jeet and Soni Enterprises, our mission is to be a beacon of excellence in the industries we serve. We are dedicated to providing sustainable and responsible solutions in mining, supply chain management, construction, manufacturing, and technology. Committed to innovation, environmental stewardship, and client satisfaction, we strive to make a positive impact on communities and contribute to the overall development of a better, interconnected world.',
+        name: ' Dr Jitendra Kumar',
+        btn: 'Learn more'
+    },
+    {
+        id: 2,
+        img: '/team3.jpeg',
+        span: 'our vision',
+        h1: 'To take our customers to a next level of experience',
+        para: ' Our vision at Jeet and Soni Enterprises is to be a dynamic force driving positive change and progress. We envision a future where our expertise in mining, supply, construction, manufacturing, and technology not only meets the needs of the present but also anticipates and addresses the challenges of tomorrow. With a focus on integrity, collaboration, and continuous improvement, we aim to be industry leaders, shaping a sustainable and prosperous future for generations to come.',
+        name: 'Soni Kumari',
+        btn: 'Learn more'
+    },
+]
+
+export const TEAM = [
+    {
+        id: 1,
+        img: '/team2.jpeg',
+        name: 'Urmila Devi'
+    },
+    {
+        id: 2,
+        img: '/team5.jpeg',
+        name: 'Amit Anand'
+    },
+    {
+        id: 3,
+        img: '/team4.jpeg',
+        name: 'Gajendra Singh'
+    },
+
 ]

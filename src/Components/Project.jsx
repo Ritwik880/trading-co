@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Project.css';
 import { PROJECT as project } from '../constants/utils';
+import LazyLoad from 'react-lazyload';
 const Project = () => {
     return (
         <>
@@ -36,7 +37,9 @@ const Project = () => {
                     <div className='project-grid-container'>
                         {
                             project.map((item, index) => (
-                                <img src={item.img} key={index} alt='project-images' className='project-image' />
+                                <LazyLoad height={200} offset={100} key={index}>
+                                    <img src={item.img} alt='project-images' className='project-image' />
+                                </LazyLoad>
                             ))
                         }
                     </div>

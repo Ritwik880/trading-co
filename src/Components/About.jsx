@@ -2,7 +2,9 @@ import React from 'react'
 import '../About.css';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { QUOTE as quote } from '../constants/utils';
+import { ABOUTDATA as data } from '../constants/utils';
 import Team from './Team';
+import LazyLoad from 'react-lazyload';
 const About = () => {
   return (
     <>
@@ -26,7 +28,9 @@ const About = () => {
       <section className='about-part2'>
         <div className='row container'>
           <div className='col-lg-6 col-md-12'>
-            <img src='/team3.jpeg' alt='about-mission' className='ourmission' />
+            <LazyLoad height={200} offset={100}>
+              <img src='/team3.jpeg' alt='about-mission' className='ourmission' />
+            </LazyLoad>
           </div>
           <div className='col-lg-6 col-md-12'>
             <span className='about-span'>
@@ -42,7 +46,7 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-                Dr Jitendra Kumar
+                Ajit Kumar, CEO
               </h6>
               <div className='landing-button-div'>
                 <button className='learn-more-btn'>
@@ -65,7 +69,7 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-              Soni Kumari
+                Soni Singh, COO
               </h6>
               <div className='landing-button-div'>
                 <button className='learn-more-btn'>
@@ -75,7 +79,9 @@ const About = () => {
             </div>
           </div>
           <div className='col-lg-6 col-md-12'>
-            <img src='/team1.jpeg' alt='about-mission' className='ourmission team1image' />
+            <LazyLoad height={200} offset={100}>
+              <img src='/team1.jpeg' alt='about-mission' className='ourmission team1image' />
+            </LazyLoad>
           </div>
         </div>
       </section>
@@ -103,7 +109,7 @@ const About = () => {
         </div>
       </section>
 
-      <Team/>
+      <Team />
 
       <section className='about-part4'>
         <div className='row container'>
@@ -134,10 +140,10 @@ const About = () => {
               <textarea className="form-control" placeholder="Message" rows={6} onResize={false}></textarea>
             </div>
             <div className='landing-button-div mt-3'>
-                <button className='learn-more-btn'>
+              <button className='learn-more-btn'>
                 Appointment <FaLongArrowAltRight />
-                </button>
-              </div>
+              </button>
+            </div>
           </div>
 
           <div className='col-lg-6 col-md-12'>
@@ -145,7 +151,9 @@ const About = () => {
               quote.map((item, index) => (
                 <div key={index} className='about-quote-div'>
                   <div className='about-quote-parent-div'>
-                    <img src={item.img} alt={item.name} />
+                    <LazyLoad height={200} offset={100}>
+                      <img src={item.img} alt={item.name} />
+                    </LazyLoad>
                     <div className='about-quote-text'>
                       <h6 className='about-quote-subHead'>
                         {item.name}

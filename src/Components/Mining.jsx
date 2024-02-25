@@ -5,6 +5,7 @@ import { MININGDIV as div } from '../constants/utils';
 import { MININGPARA as para } from '../constants/utils';
 import { SERVICES as service } from '../constants/utils';
 import { FaLongArrowAltRight } from "react-icons/fa";
+import LazyLoad from 'react-lazyload';
 
 const Mining = () => {
   return (
@@ -38,7 +39,7 @@ const Mining = () => {
             Call Us Today
           </span>
           <p className='mining-phone'>
-          +  9241149525
+            +  9241149525
           </p>
         </div>
       </div>
@@ -48,7 +49,9 @@ const Mining = () => {
           <div className='mine-image-div'>
             {
               images.map((item, index) => (
-                <img src={item.img} key={index} className='mine-image' />
+                <LazyLoad height={200} offset={100} key={index}>
+                  <img src={item.img} className='mine-image' />
+                </LazyLoad>
               ))
             }
           </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Contact.css';
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Info from './Info';
 
 const Contact = () => {
     return (
@@ -59,52 +60,9 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className='d-flex justify-content-center align-items-center contact-info'>
-                <div className='row container'>
-                    <div className='col-lg-5 col-md-12'>
-                        <div className='info-div'>
-                            <span className='info-span'>
-                            Company Address
-                            </span>
-                            <p className='info-para'>
-                            JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
-                            </p>
-                        </div>
-                    </div>
-                    <div className='col-lg-7 col-md-12'>
-                    <div className='contact-social-parent-div'>
-                            <div className='contact-social-div'>
-                                <img src='/call.svg' alt='call' />
-                                <div>
-                                    <span className='contact-social-span'>
-                                        COMPANY PHONES
-                                    </span>
-                                    <p className='contact-social-para'>
-                                        +  9241149525
-                                    </p>
-                                    <p className='contact-social-para'>
-                                        +  9241149525
-                                    </p>
-                                </div>
-                            </div>
-                            <div className='contact-social-div'>
-                                <img src='/message.svg' alt='call' />
-                                <div>
-                                    <span className='contact-social-span'>
-                                        Jeet and Soni enterprises Emails
-                                    </span>
-                                    <p className='contact-social-para'>
-                                        jeetandsoni@gmail.com
-                                    </p>
-                                    <p className='contact-social-para'>
-                                        jeetand soni.info@gmail.com
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           <Info/>
+
+           <section className='blank-section'></section>
         </>
     )
 }
