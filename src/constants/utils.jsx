@@ -326,8 +326,8 @@ export const CONTACTDATA = [
         id: 2,
         img: '/message.svg',
         name: 'Jeet and Soni enterprises Emails',
-        desc1: 'jeetandsoni@gmail.com',
-        desc2: 'jeetandsoni.info@gmail.com'
+        desc2: 'contact@jeetsoni.com',
+        desc1: 'info.jeetandsonienterprises@gmail.com'
     }
 ]
 

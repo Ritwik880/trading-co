@@ -1,11 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import '../About.css';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { QUOTE as quote } from '../constants/utils';
-import { ABOUTDATA as data } from '../constants/utils';
 import Team from './Team';
 import LazyLoad from 'react-lazyload';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const About = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    selectedService: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Use your EmailJS template ID, service ID, and user ID
+    const templateParams = {
+      to_email: 'info.jeetandsonienterprises@gmail.com',
+      from_name: formData.fullName,
+      from_email: formData.email,
+      phone_number: formData.phoneNumber,
+      selected_service: formData.selectedService,
+      message: formData.message,
+    };
+
+    await emailjs.send('service_niam8ih', 'template_j2n1eln', templateParams, 'ENAm78TXL8QXQx8NZ');
+    toast.success("Your Appointment has been created successfully!");
+
+    // Reset form fields after submission
+    setFormData({
+      fullName: '',
+      email: '',
+      phoneNumber: '',
+      selectedService: '',
+      message: '',
+    });
+  };
+
   return (
     <>
       <section className='about'>
@@ -110,9 +154,9 @@ const About = () => {
       </section>
 
       <Team />
-
       <section className='about-part4'>
         <div className='row container'>
+          <ToastContainer position="top-center" autoClose={1500} />
           <div className='col-lg-6 col-md-12'>
             <span className='about-appointment'>
               Appointment
@@ -120,31 +164,34 @@ const About = () => {
             <h1 className='about-request'>
               Request a Quote
             </h1>
-            <div className="row about-input-div">
-              <div className="col">
-                <input type="text" className="form-control about-input-box" placeholder="Full Name" aria-label="First name" />
+            <form onSubmit={handleSubmit}>
+              <div className="row about-input-div">
+                <div className="col">
+                  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} className="form-control about-input-box" placeholder="Full Name" aria-label="First name" required />
+                </div>
+                <div className="col">
+                  <input type="text" name="email" value={formData.email} onChange={handleChange} className="form-control about-input-box" placeholder="E - Mail" aria-label="Last name" required />
+                </div>
               </div>
-              <div className="col">
-                <input type="text" className="form-control about-input-box" placeholder="E - Mail" aria-label="Last name" />
+              <div className="row about-input-div">
+                <div className="col">
+                  <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="form-control about-input-box" placeholder="Phone Number" aria-label="First name" required />
+                </div>
+                <div className="col">
+                  <input type="text" name="selectedService" value={formData.selectedService} onChange={handleChange} className="form-control about-input-box" placeholder="Select Service" aria-label="Last name" required />
+                </div>
               </div>
-            </div>
-            <div className="row about-input-div">
-              <div className="col">
-                <input type="text" className="form-control about-input-box" placeholder="Phone Number" aria-label="First name" />
+              <div>
+                <textarea name="message" value={formData.message} onChange={handleChange} className="form-control" placeholder="Message" rows={6} required resize="none"></textarea>
               </div>
-              <div className="col">
-                <input type="text" className="form-control about-input-box" placeholder="Select Service" aria-label="Last name" />
+              <div className='landing-button-div mt-3'>
+                <button className='learn-more-btn' type='submit'>
+                  Appointment <FaLongArrowAltRight />
+                </button>
               </div>
-            </div>
-            <div>
-              <textarea className="form-control" placeholder="Message" rows={6} onResize={false}></textarea>
-            </div>
-            <div className='landing-button-div mt-3'>
-              <button className='learn-more-btn'>
-                Appointment <FaLongArrowAltRight />
-              </button>
-            </div>
+            </form>
           </div>
+
 
           <div className='col-lg-6 col-md-12'>
             {

@@ -247,15 +247,12 @@ html {
   align-items: flex-start;
   flex-direction: column;
   padding: 50px;
+  
+}
+.even{
   background-color: var(--text);
 }
-
-.construct-sub-div2 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 50px;
+.odd {
   background-color: var(--primary);
 }
 
@@ -564,6 +561,7 @@ html {
   justify-content: flex-end;
   align-items: center;
   position: relative;
+  /* gap: 20px; */
 }
 
 .contact-section-left-box {
@@ -574,7 +572,7 @@ html {
   border-top: 7px solid var(--primary);
   position: absolute;
   background: var(--white);
-  left: 0;
+  left: -30px;
 }
 
 .contact-section-span {
@@ -1069,7 +1067,7 @@ html {
   }
 
   .contact-social-para {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 26px;
   }
 

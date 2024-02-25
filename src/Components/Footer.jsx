@@ -11,7 +11,7 @@ const Footer = () => {
                     CALL US TODAY
                 </span>
                 <h1>
-                    +  9241149525
+                    +91  9241149525
                 </h1>
                 <div className='social-media'>
                     <a href='#'>

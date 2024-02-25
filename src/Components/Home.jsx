@@ -42,7 +42,7 @@ const Home = () => {
                         <div className='construct-div'>
                             {
                                 banner.map((item, index) => (
-                                    <div className='construct-sub-div' key={index}>
+                                    <div key={index} className={`construct-sub-div ${index % 2 === 0 ? 'even' : 'odd'}`}>
                                         <h2 className='construct-sub-div-heading'>
                                             {item.name}
                                         </h2>
@@ -141,9 +141,9 @@ const Home = () => {
                         {
                             work.map((item, index) => (
                                 <div className='image-container' key={index}>
-                                    <LazyLoad height={300} offset={100}>
+                                    {/* <LazyLoad height={800} offset={100}> */}
                                         <img src={item.img} alt='work' className='work-image'/>
-                                    </LazyLoad>
+                                    {/* </LazyLoad> */}
                                     <div className='overlay'>
                                         <h6 className='overlay-heading'>
                                             {item.name}

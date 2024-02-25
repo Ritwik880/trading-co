@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "emailjs-com": "^3.2.0",
     "gh-pages": "^6.1.1",
     "jquery": "^3.7.1",
     "owl.carousel": "^2.3.4",
@@ -22,7 +23,8 @@
     "react-icons": "^5.0.1",
     "react-lazyload": "^3.2.0",
     "react-router-dom": "^6.22.0",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "react-toastify": "^10.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
