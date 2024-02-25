@@ -73,7 +73,7 @@ export const CONSTRUCTDATA = [
     {
         id: 4,
         name: "Real Estate and Government Support",
-        title: "Thriving in the real estate sector, our success is bolstered government support. T",
+        title: "Thriving in the real estate sector, our success is bolstered government support.",
         img: '/construct4.svg'
     },
 ]

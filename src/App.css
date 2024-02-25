@@ -165,7 +165,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/public/landing-banner.svg');
+  background-image: url('/landing-banner.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -173,7 +173,7 @@ html {
 }
 
 .research {
-  background-image: url('/public/research.png');
+  background-image: url('/research.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

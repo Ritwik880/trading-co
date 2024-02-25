@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/public/contact-landing.svg');
+    background-image: url('/contact-landing.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
