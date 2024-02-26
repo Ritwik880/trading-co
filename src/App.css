@@ -286,7 +286,7 @@ html {
 }
 
 .construct-sub-right-div-heading {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 34px;
   line-height: 38px;
   color: var(--text);
@@ -584,7 +584,7 @@ html {
 
 .contact-heading {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 38px;
   color: var(--text);
   word-wrap: break-word;
@@ -756,7 +756,7 @@ html {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 100px 150px;
+  padding: 70px 150px;
   gap: 20px;
 }
 

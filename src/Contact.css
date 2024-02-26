@@ -46,8 +46,15 @@
     color: var(--text);
     word-break: break-all;
 }
-.blank-section{
+
+.blank-section {
     padding-bottom: 100px;
+}
+.about-input-div{
+    padding-bottom: 30px;
+}
+.contact-part{
+    padding: 100px 0;
 }
 @media (max-width: 767px) {
     .info-para {

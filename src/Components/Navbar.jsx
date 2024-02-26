@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
 
             </header>
-            <nav className={`navbar navbar-expand-lg ${scrolled ? 'bg-colored' : 'bg-light'}`}>
+            <nav className={`navbar navbar-expand-lg ${scrolled ? 'bg-colored' : ''}`}>
                 <div className="container">
 
                     <a className="navbar-brand" href="/">

@@ -5,6 +5,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import Info from './Info';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../About.css'
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -66,7 +67,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className='about-part4'>
+            <section className='d-flex justify-content-center align-items-center contact-part'>
                 <div className='row container'>
                     <ToastContainer position="top-center" autoClose={1500} />
                     <div className='col-lg-12 col-md-12'>

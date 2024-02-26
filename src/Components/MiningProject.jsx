@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Mining-Project.css';
+import '../About.css'
 import { MINEPROJECT as project } from '../constants/utils';
 import { SOCIAL as social } from '../constants/utils';
 import { IMAGES as images } from '../constants/utils';

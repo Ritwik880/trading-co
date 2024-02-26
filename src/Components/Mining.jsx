@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Mining.css';
+import '../About.css'
 import { MINEIMAGES as images } from '../constants/utils';
 import { MININGDIV as div } from '../constants/utils';
 import { MININGPARA as para } from '../constants/utils';
