@@ -261,19 +261,18 @@ export const PROJECT = [
 export const HEADER = [
     {
         id: 1,
-        img: '/tw.svg'
-    },
-    {
-        id: 2,
-        img: '/header-fb.svg'
+        img: '/tw.svg',
+        link: 'https://twitter.com/JeetandSoni'
     },
     {
         id: 3,
-        img: '/header-ln.svg'
+        img: '/header-ln.svg',
+        link: 'https://www.linkedin.com/company/jeet-and-soni-enterprises-llp/'
     },
     {
         id: 4,
-        img: '/header-yt.svg'
+        img: '/header-yt.svg',
+        link: 'https://youtu.be/4hFOJIMkEAc?feature=shared'
     },
 ]
 export const WORKIMAGE = [
@@ -412,4 +411,42 @@ export const TEAM = [
         name: 'Gajendra Singh'
     },
 
+]
+
+export const APPOINTMENTDATA = [
+    {
+        id: 1,
+        img: '/one.svg',
+        name: 'Mining Expertise'
+    },
+    {
+        id: 2,
+        img: '/two.svg',
+        name: 'Supply Chain Mastery'
+    },
+    {
+        id: 3,
+        img: '/three.svg',
+        name: 'Construction Excellence'
+    },
+    {
+        id: 4,
+        img: '/four.svg',
+        name: 'Manufacturing Prowess'
+    },
+    {
+        id: 5,
+        img: '/five.svg',
+        name: 'Tender Management'
+    },
+    {
+        id: 6,
+        img: '/six.svg',
+        name: 'Career Counselling'
+    },
+    {
+        id: 7,
+        img: '/seven.svg',
+        name: 'Technology Solutions'
+    },
 ]

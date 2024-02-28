@@ -26,17 +26,17 @@ const Navbar = () => {
                         <div>
                             <ul className='top-header-list'>
                                 <li>
-                                    <a href='#'>
+                                    <a href='/'>
                                         SUPPORT
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='#'>
+                                    <a href='/project'>
                                         PROJECTS
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='#'>
+                                    <a href='/'>
                                         CAREERS
                                     </a>
                                 </li>
@@ -45,7 +45,7 @@ const Navbar = () => {
                         <div className='top-header-icon'>
                             {
                                 header.map((item, index) => (
-                                    <a href='#' className='header-social' key={index}>
+                                    <a href={item.link} target='_blank' className='header-social' key={index}>
                                         <LazyLoad height={200} offset={100}>
                                             <img src={item.img} alt='header' />
                                         </LazyLoad>

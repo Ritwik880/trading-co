@@ -11,7 +11,7 @@ const Info = () => {
                             COMPANY ADDRESS
                         </span>
                         <h3 className='contact-heading'>
-                            JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
+                        JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmi Enclave Kaviraman Path, Navshakti, Patna, Phulwari, Bihar, India, 800001
                         </h3>
                     </div>
                     <div className='contact-social-parent-div'>

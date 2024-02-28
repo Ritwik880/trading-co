@@ -40,7 +40,7 @@ const Mining = () => {
             Call Us Today
           </span>
           <p className='mining-phone'>
-            +  9241149525
+            +91  9241149525
           </p>
         </div>
       </div>

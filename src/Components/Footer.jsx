@@ -14,21 +14,18 @@ const Footer = () => {
                     +91  9241149525
                 </h1>
                 <div className='social-media'>
-                    <a href='#'>
+                    <a href='https://twitter.com/JeetandSoni' target='_blank'>
                         <img src='/icon1.svg' alt='icon' />
                     </a>
-                    <a href='#'>
-                        <img src='/icon2.svg' alt='icon' />
-                    </a>
-                    <a href='#'>
+                    <a href='https://www.linkedin.com/company/jeet-and-soni-enterprises-llp/' target='_blank'>
                         <img src='/icon3.svg' alt='icon' />
                     </a>
-                    <a href='#'>
+                    <a href='https://youtu.be/4hFOJIMkEAc?feature=shared' target='_blank'>
                         <img src='/icon4.svg' alt='icon' />
                     </a>
                 </div>
                 <p>
-                    JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmienclavekaviramanpath, Navshakti, Patna, Phulwari, Bihar, India, 800001
+                    JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmi Enclave Kaviraman Path, Navshakti, Patna, Phulwari, Bihar, India, 800001
                 </p>
             </div>
             <div className='footer-right-part'>

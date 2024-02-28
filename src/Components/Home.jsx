@@ -28,9 +28,9 @@ const Home = () => {
                                 At Jeet and Soni Enterprises, our mission is to be a beacon of excellence in the industries we serve. We are dedicated to providing sustainable and responsible solutions in mining, supply chain management, construction, manufacturing, and technology. Committed to innovation, environmental stewardship, and client satisfaction, we strive to make a positive impact on ....
                             </p>
                             <div className='landing-button-div'>
-                                <button className='learn-more-btn'>
+                                <a href='/about' className='learn-more-btn'>
                                     Learn more <FaLongArrowAltRight />
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -91,19 +91,19 @@ const Home = () => {
 
                             </p>
                             <div className='landing-button-div'>
-                                <button className='learn-more-btn'>
+                                <a href='/about' className='learn-more-btn'>
                                     Learn more <FaLongArrowAltRight />
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-12'>
                             <div className='about-bottom-section-image-div'>
                                 <div className='video-icon-btn'>
-                                    <button onClick={handleShow} className='video-icon'>
-                                    <LazyLoad height={200} offset={100}>
-                                        <img src='/video_icon.svg' alt='video' />
-                                    </LazyLoad>
-                                    </button>
+                                    <a href='https://youtu.be/4hFOJIMkEAc?feature=shared' target='_blank' className='video-icon'>
+                                        <LazyLoad height={200} offset={100}>
+                                            <img src='/video_icon.svg' alt='video' />
+                                        </LazyLoad>
+                                    </a>
                                 </div>
                                 <div className='about-bottom-section-sub-div'>
                                     <LazyLoad height={200} offset={100}>
@@ -117,17 +117,6 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <Modal show={show} onHide={handleClose}
-                            size="lg"
-                            aria-labelledby="contained-modal-title-vcenter"
-                            centered
-                        >
-                            <Modal.Body>
-                                <video controls width="100%" height="auto">
-                                    <source src="/inshot.mp4" type="video/mp4" />
-                                </video>
-                            </Modal.Body>
-                        </Modal>
 
                     </div>
 
@@ -142,7 +131,7 @@ const Home = () => {
                             work.map((item, index) => (
                                 <div className='image-container' key={index}>
                                     {/* <LazyLoad height={800} offset={100}> */}
-                                        <img src={item.img} alt='work' className='work-image'/>
+                                    <img src={item.img} alt='work' className='work-image' />
                                     {/* </LazyLoad> */}
                                     <div className='overlay'>
                                         <h6 className='overlay-heading'>
@@ -164,7 +153,7 @@ const Home = () => {
                 </div>
             </section>
             <section className='contact-section'></section>
-            <Info/>
+            <Info />
             <section className='work-section'>
                 <div className='row container'>
                     <span className='work-span'>

@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import '../About.css';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { QUOTE as quote } from '../constants/utils';
+import { APPOINTMENTDATA as data } from '../constants/utils';
 import Team from './Team';
 import LazyLoad from 'react-lazyload';
 import { ToastContainer, toast } from 'react-toastify';
@@ -90,7 +91,7 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-                Ajit Kumar, CEO
+                Ajit Kumar
               </h6>
               <div className='landing-button-div'>
                 <button className='learn-more-btn'>
@@ -113,7 +114,7 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-                Soni Singh, COO
+                Soni Singh
               </h6>
               <div className='landing-button-div'>
                 <button className='learn-more-btn'>
@@ -149,6 +150,23 @@ const About = () => {
             <button className='learn-more-btn'>
               Appointment <FaLongArrowAltRight />
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className='d-flex justify-content-center align-items-center appointment-section'>
+        <div className='row container'>
+          <div className='appointment-parent-box'>
+            {
+              data.map((item, index) => (
+                <div className='appointment-box'>
+                  <img src={item.img} alt={item.name} />
+                  <p className='appointment-text'>
+                    {item.name}
+                  </p>
+                </div>
+              ))
+            }
           </div>
         </div>
       </section>
