@@ -452,3 +452,54 @@ export const APPOINTMENTDATA = [
         name: 'Technology Solutions'
     },
 ]
+
+export const FOOTERLEFT = [
+    {
+        id: 1,
+        logo: '/nav-logo.png',
+        text: 'CALL US TODAY',
+        phone: '+91  9241149525',
+        images: [
+            {img: '/icon1.svg', link: 'https://twitter.com/JeetandSoni'},
+            {img: '/icon3.svg', link: 'https://www.linkedin.com/company/jeet-and-soni-enterprises-llp/'},
+            {img: '/icon4.svg', link: 'https://youtu.be/4hFOJIMkEAc?feature=shared'}
+        ],
+        para: "JEET AND SONI ENTERPRISES LLP's registered office address is F No. 202, 2 Floor Vijay Laxmi Enclave Kaviraman Path, Navshakti, Patna, Phulwari, Bihar, India, 800001"
+    }
+]
+export const FOOTER = [
+    {
+        id: 1,
+        headline: 'Quick Links',
+        list: [
+            {name: 'Home', href: '/'},
+            {name: 'About Us', href: '/about'},
+            {name: 'Our Projects', href: '/mining-project'},
+            {name: 'Pricings', href: '/coming-soon'},
+            {name: 'Contacts', href: '/contact'},
+        ]
+        
+    },
+    {
+        id: 2,
+        headline: 'Our Services',
+        list: [
+            {name: 'Mining', href: '/mining'},
+            {name: 'Supply Chain', href: '/coming-soon'},
+            {name: 'Construction', href: '/coming-soon'},
+            {name: 'Real Estate', href: '/coming-soon'},
+        ]
+    },
+    {
+        id: 3,
+        headline: 'Our News',
+        news: [
+            {name: 'Jeet and Soni Enterprises LLP', date: '26 Jan 2024', title: 'by Nishant Kumar'},
+            {name: 'Jeet and Soni Enterprises LLP', date: '26 Jan 2024', title: 'by Nishant Kumar'},
+        ]
+    },
+    {
+        id: 4,
+        title: '© Copyright Jeet and Soni Enterprises LLP. All Rights Reserved 2024'
+    }
+]

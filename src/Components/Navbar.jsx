@@ -117,12 +117,12 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/construction">
+                                <a className="nav-link" href="/coming-soon">
                                     Construction
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/real-estate">
+                                <a className="nav-link" href="/coming-soon">
                                     Real Estate
                                 </a>
                             </li>
