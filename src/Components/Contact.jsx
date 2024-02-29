@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //library import
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 
 //react-icons
 import { FaLongArrowAltRight } from 'react-icons/fa';
@@ -28,7 +28,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -43,10 +43,25 @@ const Contact = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/post', formData);
+      // Use emailjs to send the email
+      const emailParams = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phoneNumber: formData.phoneNumber,
+        address: formData.address,
+        message: formData.message,
+      };
+
+      const response = await emailjs.send(
+        'service_k1k26qk',
+        'template_tgg2n9l',
+        emailParams,
+        'ENAm78TXL8QXQx8NZ'
+      );
+
+      // Check the response from emailjs
       if (response.status === 200) {
         toast.success('Message sent successfully');
-
         setFormData({
           fullName: '',
           email: '',
@@ -62,6 +77,7 @@ const Contact = () => {
       toast.error('Error sending message');
     }
   };
+
 
 
   return (
@@ -82,7 +98,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
       <section className='d-flex justify-content-center align-items-center contact-part'>
         <div className='row container'>
           <ToastContainer position='top-center' autoClose={1500} />

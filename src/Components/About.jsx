@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //library import
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 import LazyLoad from 'react-lazyload';
 
 //css
@@ -32,7 +32,7 @@ const About = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -47,9 +47,25 @@ const About = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/post', formData);
+      // Use emailjs to send the email
+      const emailParams = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phoneNumber: formData.phoneNumber,
+        selectedService: formData.selectedService,
+        message: formData.message,
+      };
+
+      const response = await emailjs.send(
+        'service_k1k26qk',
+        'template_2jgxw81',
+        emailParams,
+        'ENAm78TXL8QXQx8NZ'
+      );
+
+      // Check the response from emailjs
       if (response.status === 200) {
-        toast.success('Appointment created successfully');
+        toast.success('Message sent successfully');
         setFormData({
           fullName: '',
           email: '',
