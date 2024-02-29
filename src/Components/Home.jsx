@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+
+//react-icons
 import { FaLongArrowAltRight } from "react-icons/fa";
+
+//utils
 import { CONSTRUCTDATA as data } from '../constants/utils';
 import { WORKIMAGE as work } from '../constants/utils';
 import { BANNER as banner } from '../constants/utils';
 import { TESTIMONIAL as test } from '../constants/utils';
+
+//components
 import Video from './Video';
 import Modal from 'react-bootstrap/Modal';
 import LazyLoad from 'react-lazyload';
@@ -12,8 +18,32 @@ import Info from './Info';
 const Home = () => {
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const iframeRef = useRef();
+
+    useEffect(() => {
+        const handleClose = () => {
+            setShow(false);
+            pauseVideo();
+        };
+
+        const handleOutsideClick = (event) => {
+            if (show && !iframeRef.current.contains(event.target)) {
+                handleClose();
+            }
+        };
+
+        window.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            window.removeEventListener('click', handleOutsideClick);
+        };
+    }, [show]);
+
+    const pauseVideo = () => {
+        iframeRef.current.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    };
 
     return (
         <>
@@ -96,14 +126,15 @@ const Home = () => {
                                 </a>
                             </div>
                         </div>
+
                         <div className='col-lg-6 col-md-12'>
                             <div className='about-bottom-section-image-div'>
                                 <div className='video-icon-btn'>
-                                    <a href='https://youtu.be/4hFOJIMkEAc?feature=shared' target='_blank' className='video-icon'>
+                                    <button onClick={handleShow} className='video-icon'>
                                         <LazyLoad height={200} offset={100}>
                                             <img src='/video_icon.svg' alt='video' />
                                         </LazyLoad>
-                                    </a>
+                                    </button>
                                 </div>
                                 <div className='about-bottom-section-sub-div'>
                                     <LazyLoad height={200} offset={100}>
@@ -117,6 +148,20 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        <Modal
+                            show={show}
+                            onHide={() => {
+                                setShow(false);
+                                pauseVideo();
+                            }}
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered
+                        >
+                            <Modal.Body>
+                                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/4hFOJIMkEAc?si=-a3mFDogMRP5QXR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </Modal.Body>
+                        </Modal>
 
                     </div>
 
@@ -130,9 +175,7 @@ const Home = () => {
                         {
                             work.map((item, index) => (
                                 <div className='image-container' key={index}>
-                                    {/* <LazyLoad height={800} offset={100}> */}
                                     <img src={item.img} alt='work' className='work-image' />
-                                    {/* </LazyLoad> */}
                                     <div className='overlay'>
                                         <h6 className='overlay-heading'>
                                             {item.name}

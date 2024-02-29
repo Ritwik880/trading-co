@@ -396,7 +396,8 @@ html {
 }
 
 .modal-content {
-  background-color: transparent;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .about-bottom-section-sub-div2 {
@@ -702,6 +703,7 @@ html {
 
 .modal-body {
   padding: 0;
+  background: transparent;
 }
 
 @media screen and (min-width: 768px) {

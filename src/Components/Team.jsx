@@ -1,7 +1,14 @@
 import React from 'react';
+
+//css
 import '../Team.css';
+
+//utils
 import { TEAM as data } from '../constants/utils';
+
+//library-import
 import LazyLoad from 'react-lazyload';
+
 const Team = () => {
     return (
         <section className='team-section'>

@@ -7,6 +7,7 @@ import Loader from './Components/Loader';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle'
+import ComingSoon from './Components/ComingSoon';
 
 // Lazy-loaded components
 const Home = lazy(() => import('./Components/Home'));
@@ -48,6 +49,7 @@ const App = () => {
               <Route path='/mining-project' element={<MiningProject />} />
               <Route path='/construction' element={<Construction />} />
               <Route path='/real-estate' element={<RealEstate />} />
+              <Route path='/coming-soon' element={<ComingSoon />} />
             </Routes>
           </Suspense>
           <Footer />

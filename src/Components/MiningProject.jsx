@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
+
+//css
 import '../Mining-Project.css';
-import '../About.css'
+import '../About.css';
+
+//utils
 import { MINEPROJECT as project } from '../constants/utils';
 import { SOCIAL as social } from '../constants/utils';
 import { IMAGES as images } from '../constants/utils';
+
+//library-import
 import LazyLoad from 'react-lazyload';
+
 const MiningProject = () => {
     return (
         <>

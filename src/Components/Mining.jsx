@@ -1,14 +1,27 @@
 import React from 'react'
+
+//css
 import '../Mining.css';
-import '../About.css'
+import '../About.css';
+
+//utils
 import { MINEIMAGES as images } from '../constants/utils';
 import { MININGDIV as div } from '../constants/utils';
 import { MININGPARA as para } from '../constants/utils';
 import { SERVICES as service } from '../constants/utils';
+
+//react-icons
 import { FaLongArrowAltRight } from "react-icons/fa";
+
+//library-import
 import LazyLoad from 'react-lazyload';
 
+//hook
+import { useNavigate } from 'react-router-dom';
+
 const Mining = () => {
+
+  const navigate = useNavigate()
   return (
     <>
       <section className='mining'>
@@ -87,7 +100,7 @@ const Mining = () => {
                       {item.title}
                     </p>
                   }
-                  <button className='mining-btn-arrow'>
+                  <button onClick={()=> navigate(item.link)} className='mining-btn-arrow'>
                     <FaLongArrowAltRight fontSize={30} />
                   </button>
                 </div>

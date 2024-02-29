@@ -1,6 +1,11 @@
 import React from 'react';
+
+//utils
 import { CONTACTDATA as contact } from '../constants/utils';
-import LazyLoad from 'react-lazyload'
+
+//library-import
+import LazyLoad from 'react-lazyload';
+
 const Info = () => {
     return (
         <section className='contact-section-div'>

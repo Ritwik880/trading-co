@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+
+//library import
+import axios from 'axios';
+import LazyLoad from 'react-lazyload';
+
+//css
 import '../About.css';
+
+//react-icons
 import { FaLongArrowAltRight } from "react-icons/fa";
+
+//utils
 import { QUOTE as quote } from '../constants/utils';
 import { APPOINTMENTDATA as data } from '../constants/utils';
+
+//components
 import Team from './Team';
-import LazyLoad from 'react-lazyload';
+
+//react-toastify
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -19,36 +31,39 @@ const About = () => {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    // Use your EmailJS template ID, service ID, and user ID
-    const templateParams = {
-      to_email: 'info.jeetandsonienterprises@gmail.com',
-      from_name: formData.fullName,
-      from_email: formData.email,
-      phone_number: formData.phoneNumber,
-      selected_service: formData.selectedService,
-      message: formData.message,
-    };
+    const requiredFields = ['fullName', 'email', 'phoneNumber', 'selectedService', 'message'];
+    const isEmptyField = requiredFields.some(field => !formData[field]);
 
-    await emailjs.send('service_niam8ih', 'template_j2n1eln', templateParams, 'ENAm78TXL8QXQx8NZ');
-    toast.success("Your Appointment has been created successfully!");
+    if (isEmptyField) {
+      toast.error('Please fill in all required fields');
+      return;
+    }
 
-    // Reset form fields after submission
-    setFormData({
-      fullName: '',
-      email: '',
-      phoneNumber: '',
-      selectedService: '',
-      message: '',
-    });
+    try {
+      const response = await axios.post('http://localhost:3001/post', formData);
+      if (response.status === 200) {
+        toast.success('Appointment created successfully');
+        setFormData({
+          fullName: '',
+          email: '',
+          phoneNumber: '',
+          selectedService: '',
+          message: '',
+        });
+      } else {
+        toast.error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message', error);
+      toast.error('Error sending message');
+    }
   };
 
   return (
@@ -91,13 +106,9 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-                Ajit Kumar
+              Dr Jitendra Kumar
               </h6>
-              <div className='landing-button-div'>
-                <button className='learn-more-btn'>
-                  Learn more <FaLongArrowAltRight />
-                </button>
-              </div>
+ 
             </div>
           </div>
           <div className='col-lg-6 col-md-12'>
@@ -114,13 +125,9 @@ const About = () => {
               </p>
 
               <h6 className='about-part2-sub-head'>
-                Soni Singh
+              Soni Kumari
               </h6>
-              <div className='landing-button-div'>
-                <button className='learn-more-btn'>
-                  Learn more <FaLongArrowAltRight />
-                </button>
-              </div>
+
             </div>
           </div>
           <div className='col-lg-6 col-md-12'>
@@ -147,9 +154,9 @@ const About = () => {
           </p>
 
           <div className='d-flex justify-content-center'>
-            <button className='learn-more-btn'>
+            <a href='#appointment' className='learn-more-btn'>
               Appointment <FaLongArrowAltRight />
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -172,7 +179,7 @@ const About = () => {
       </section>
 
       <Team />
-      <section className='about-part4'>
+      <section className='about-part4' id='appointment'>
         <div className='row container'>
           <ToastContainer position="top-center" autoClose={1500} />
           <div className='col-lg-6 col-md-12'>
@@ -185,18 +192,18 @@ const About = () => {
             <form onSubmit={handleSubmit}>
               <div className="row about-input-div">
                 <div className="col">
-                  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} className="form-control about-input-box" placeholder="Full Name" aria-label="First name" required />
+                  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} className="form-control about-input-box" placeholder="Full Name" aria-label="Full name" required />
                 </div>
                 <div className="col">
-                  <input type="text" name="email" value={formData.email} onChange={handleChange} className="form-control about-input-box" placeholder="E - Mail" aria-label="Last name" required />
+                  <input type="text" name="email" value={formData.email} onChange={handleChange} className="form-control about-input-box" placeholder="E - Mail" aria-label="Email" required />
                 </div>
               </div>
               <div className="row about-input-div">
                 <div className="col">
-                  <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="form-control about-input-box" placeholder="Phone Number" aria-label="First name" required />
+                  <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="form-control about-input-box" placeholder="Phone Number" aria-label="Phone Number" required />
                 </div>
                 <div className="col">
-                  <input type="text" name="selectedService" value={formData.selectedService} onChange={handleChange} className="form-control about-input-box" placeholder="Select Service" aria-label="Last name" required />
+                  <input type="text" name="selectedService" value={formData.selectedService} onChange={handleChange} className="form-control about-input-box" placeholder="Select Service" aria-label="Selected Service" required />
                 </div>
               </div>
               <div>

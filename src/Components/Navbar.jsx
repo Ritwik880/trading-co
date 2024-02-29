@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
+
+//utils
 import { HEADER as header } from '../constants/utils';
 import { DROPDOWN as dropdown } from '../constants/utils';
+
+//library-import
 import LazyLoad from 'react-lazyload';
+
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
 
@@ -26,17 +31,17 @@ const Navbar = () => {
                         <div>
                             <ul className='top-header-list'>
                                 <li>
-                                    <a href='/'>
+                                    <a href='/coming-soon'>
                                         SUPPORT
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='/project'>
+                                    <a href='/coming-soon'>
                                         PROJECTS
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <a href='/coming-soon'>
                                         CAREERS
                                     </a>
                                 </li>

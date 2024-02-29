@@ -1,5 +1,8 @@
-import React from 'react'
-import LazyLoad from 'react-lazyload'
+import React from 'react';
+
+//library-import
+import LazyLoad from 'react-lazyload';
+
 const Video = () => {
   return (
     <section className='video-section'>

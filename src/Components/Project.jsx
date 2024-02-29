@@ -1,7 +1,14 @@
 import React from 'react';
+
+//css
 import '../Project.css';
+
+//utils
 import { PROJECT as project } from '../constants/utils';
+
+//library-import
 import LazyLoad from 'react-lazyload';
+
 const Project = () => {
     return (
         <>

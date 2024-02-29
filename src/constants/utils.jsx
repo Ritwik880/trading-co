@@ -124,10 +124,12 @@ export const MININGDIV = [
         id: 1,
         name: "Get a appointment with our Expert",
         title: "Seize the chance to engage with our mentors and professionals.",
+        link: '/contact'
     },
     {
         id: 2,
         name: "View our Mining Projects",
+        link: '/coming-soon'
     },
 ]
 
@@ -318,7 +320,7 @@ export const CONTACTDATA = [
         id: 1,
         img: '/call.svg',
         name: 'COMPANY PHONES',
-        desc1: '+91  9241149525',
+        desc1: '+91  9241060075',
         desc2: '+91  9241149525'
     },
     {

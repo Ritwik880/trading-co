@@ -1,7 +1,8 @@
-// Loader.js
-
 import React from 'react';
+
+//library-import
 import { HashLoader } from 'react-spinners';
+
 const Loader = () => {
     return (
         <section className='loader-spinner'>
