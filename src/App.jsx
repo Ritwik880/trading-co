@@ -15,6 +15,7 @@ import { Route, Routes } from 'react-router-dom';
 //bootstrap-css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle'
+import Chat from './Components/Chat';
 
 // Lazy-loaded components
 const Home = lazy(() => import('./Components/Home'));
@@ -34,13 +35,10 @@ const App = () => {
 
     return () => clearTimeout(timeout);
   }, []);
-
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
+      {
+        loading ? <Loader /> : <>
           <Navbar />
           <Suspense fallback={<Loader />}>
             <Routes>
@@ -55,11 +53,12 @@ const App = () => {
               <Route path='/coming-soon' element={<ComingSoon />} />
             </Routes>
           </Suspense>
+          <Chat/>
           <Footer />
         </>
-      )}
+      }
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
