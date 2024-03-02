@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { IoChatbubbleEllipsesSharp } from 'react-icons/io5';
 
 const Chat = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +25,7 @@ const Chat = () => {
 
   return (
     <button onClick={handleWhatsAppClick} className={`chat-icon ${isVisible ? 'visible' : ''}`}>
-      <IoChatbubbleEllipsesSharp fontSize={60} color='#FF00FF'/>
+      <img src='/chat-icon.png' alt='chat-icon' className='chat-img'/>
     </button>
 
   );
